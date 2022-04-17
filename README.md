@@ -1,1 +1,0 @@
-[![Build status](https://ci.appveyor.com/api/projects/status/qa6pptcw85p8n0o6?svg=true)](https://ci.appveyor.com/project/MironovED/4-1-report-allure)
