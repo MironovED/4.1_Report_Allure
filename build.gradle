@@ -14,20 +14,22 @@ compileTestJava.options.encoding = "UTF-8"
 
 allure {
     autoconfigure = true
-    version = '2.16.1'
+    version = '2.17.3'
 
     useJUnit5 {
-        version = '2.16.1'
+        version = '2.17.3'
     }
 }
 
 repositories {
-    jcenter()
     mavenCentral()
 }
 
 dependencies {
-    testImplementation 'org.junit.jupiter:junit-jupiter:5.6.1'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.2'
+    testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.8.2'
+
+
     testImplementation 'com.codeborne:selenide:5.19.0'
     implementation 'com.github.javafaker:javafaker:1.0.2'
 
@@ -37,8 +39,12 @@ dependencies {
     testCompileOnly 'org.projectlombok:lombok:1.18.22'
     testAnnotationProcessor 'org.projectlombok:lombok:1.18.22'
 
-    testImplementation 'io.qameta.allure:allure-selenide:2.16.1'
+    implementation 'io.qameta.allure:allure-selenide:2.17.3'
 
+}
+
+configurations {
+    testCompile
 }
 
 test {
